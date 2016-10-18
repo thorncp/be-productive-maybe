@@ -21,4 +21,6 @@ en:
         "%B %d"
 
   titles:
-    application: Be-productive-maybe
+    application: Be Productive Maybe
+    tasks:
+      index: Tasks
