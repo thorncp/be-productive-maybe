@@ -1,0 +1,8 @@
+= simple_form_for task do |form|
+  = form.input :description
+  = form.submit
+
+ol
+  - tasks.each do |task|
+    li
+      = task.description

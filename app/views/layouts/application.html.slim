@@ -1,24 +1,24 @@
 doctype html
 html lang="en"
 
-head
-  meta charset="utf-8"
-  meta name="ROBOTS" content="NOODP"
-  meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  title
-    = title
-  = stylesheet_link_tag :application, media: "all"
-  = csrf_meta_tags
+  head
+    meta charset="utf-8"
+    meta name="ROBOTS" content="NOODP"
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    title
+      = title
+    = stylesheet_link_tag :application, media: "all"
+    = csrf_meta_tags
 
-body class=body_class
-  = render "flashes"
-  - if signed_in?
-    ' Signed in as:
-    = current_user.email
-    = button_to 'Sign out', sign_out_path, method: :delete
-  - else
-    => link_to 'Sign in', sign_in_path
-    = link_to 'Sign up', sign_up_path
-  = yield
-  = render "javascript"
-  = render "css_overrides"
+  body class=body_class
+    = render "flashes"
+    - if signed_in?
+      ' Signed in as:
+      = current_user.email
+      = button_to 'Sign out', sign_out_path, method: :delete
+    - else
+      => link_to 'Sign in', sign_in_path
+      = link_to 'Sign up', sign_up_path
+    = yield
+    = render "javascript"
+    = render "css_overrides"

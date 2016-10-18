@@ -6,6 +6,11 @@ en:
       with_weekday:
         "%a %m/%d/%y"
 
+  simple_form:
+    labels:
+      task:
+        description: Task
+
   time:
     formats:
       default:
