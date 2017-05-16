@@ -7,3 +7,6 @@ ruby:
   enabled: true
 scss:
   enabled: true
+slim_lint:
+  config_file: .slim-lint.yml
+  enabled: true
