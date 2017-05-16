@@ -4,5 +4,7 @@
 
 ol
   - tasks.each do |task|
-    li
-      = task.description
+    li id=dom_id(task)
+      = form_for task do |form|
+        = form.text_field :description
+        = form.submit "Update"

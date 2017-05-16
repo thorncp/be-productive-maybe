@@ -16,6 +16,17 @@ class TasksController < ApplicationController
     end
   end
 
+  def update
+    task = current_user.tasks.find(params[:id])
+
+    if task.update(task_params)
+      flash[:success] = "Task updated"
+      redirect_to tasks_path
+    else
+      render :index, locals: { task: task, tasks: current_user.tasks }
+    end
+  end
+
   private
 
   def task_params
