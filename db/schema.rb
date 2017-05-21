@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161018033204) do
+ActiveRecord::Schema.define(version: 20170521154106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "completions", force: :cascade do |t|
+    t.integer  "task_id",      null: false
+    t.datetime "completed_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["task_id"], name: "index_completions_on_task_id", using: :btree
+  end
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
@@ -49,5 +57,6 @@ ActiveRecord::Schema.define(version: 20161018033204) do
     t.index ["remember_token"], name: "index_users_on_remember_token", using: :btree
   end
 
+  add_foreign_key "completions", "tasks"
   add_foreign_key "tasks", "users"
 end

@@ -1,4 +1,7 @@
 en:
+  completions:
+    success: Task completed
+
   date:
     formats:
       default:

@@ -1,4 +1,9 @@
 FactoryGirl.define do
+  factory :completion do
+    task
+    completed_at { Time.current }
+  end
+
   factory :task do
     description "A TODO item"
     user
