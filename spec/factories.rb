@@ -5,7 +5,7 @@ FactoryGirl.define do
   end
 
   factory :task do
-    description "A TODO item"
+    sequence(:description) { |n| "task #{n}" }
     user
   end
 
