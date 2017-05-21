@@ -25,6 +25,7 @@ gem "title"
 gem "uglifier"
 
 group :development do
+  gem "letter_opener"
   gem "listen"
   gem "spring"
   gem "spring-commands-rspec"
