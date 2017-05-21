@@ -2,6 +2,13 @@ en:
   completions:
     success: Task completed
 
+  completions_mailer:
+    notify:
+      complete: I did it!
+      prompt: >
+        If you're feeling up to it, you should %{description}.
+      subject: Hey, maybe %{description}?
+
   date:
     formats:
       default:

@@ -1,0 +1,5 @@
+p
+  = t(".prompt", description: @task.description)
+
+p
+  = link_to t(".complete"), task_completion_url(@task)
